@@ -39,7 +39,7 @@ fetch('/api/sensors')
     .catch(err => console.error(err));
 
 // WebSocket connection
-const ws = new WebSocket(`ws://${window.location.host}`);
+const ws = new WebSocket(`wss://${window.location.host}`);
 
 ws.onmessage = (event) => {
     const data = JSON.parse(event.data);
