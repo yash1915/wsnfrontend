@@ -39,7 +39,7 @@ fetch('https://wsnbackend.onrender.com/api/sensors')
     .catch(err => console.error(err));
 
 // WebSocket connection
-const ws = = new WebSocket('wss://wsnbackend.onrender.com');
+const ws  = new WebSocket('wss://wsnbackend.onrender.com');
 
 ws.onmessage = (event) => {
     const data = JSON.parse(event.data);
