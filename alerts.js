@@ -22,7 +22,7 @@ const createAlertItem = (alert) => {
     return item;
 };
 
-fetch('/api/sensors/alerts')
+fetch('https://wsnbackend.onrender.com/api/sensors/alerts')
     .then(response => response.json())
     .then(alerts => {
         alerts.forEach(alert => {
