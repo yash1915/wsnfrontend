@@ -13,7 +13,7 @@ const createChart = (ctx, label, data, color) => {
     });
 };
 
-fetch('/api/sensors/history')
+fetch('https://wsnbackend.onrender.com/api/sensors/history')
     .then(response => response.json())
     .then(data => {
         const mq2Data = data.map(d => ({ timestamp: d.timestamp, value: d.mq2 }));
