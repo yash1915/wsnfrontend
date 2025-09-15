@@ -33,7 +33,7 @@ const updateDashboard = (data) => {
 };
 
 // Initial data load
-fetch('/api/sensors')
+fetch('https://wsnbackend.onrender.com/api/sensors')
     .then(response => response.json())
     .then(data => updateDashboard(data))
     .catch(err => console.error(err));
