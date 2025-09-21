@@ -8,7 +8,7 @@ const createAlertItem = (alert) => {
     if (alert.mq2 > 500) message += `High Gas Level: ${alert.mq2} ppm. `;
     if (alert.temperature > 35) message += `High Temperature: ${alert.temperature}°C. `;
     if (alert.pir) message += `Motion Detected. `;
-    if (alert.ir) message += `Object Detected. `;
+    if (!alert.ir) message += `Fire Detected. `;
 
     const messageEl = document.createElement('p');
     messageEl.textContent = message;
