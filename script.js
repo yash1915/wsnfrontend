@@ -16,7 +16,7 @@ const createCard = (name, value, unit = '') => {
     if (name === 'PIR') {
         valueEl.textContent = value ? 'Motion Detected' : 'No Motion';
     } else if (name === 'IR') {
-        valueEl.textContent = value ? 'Object Detected' : 'No Object';
+        valueEl.textContent = value ? 'No fire detected' : 'Fire detected';
     } else {
         valueEl.textContent = `${value} ${unit}`;
     }
